@@ -1,3 +1,5 @@
 *Falta estilizar e modificar o front
 *Falta estabelecer a transição de rotas
 *Falta criar métodos para busca de musicas, adição de musicas e edição
+*Acho que falta alguns formulários
+OBS: Acho que não precisa de nada relacionado a BD
