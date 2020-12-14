@@ -1,1 +1,3 @@
-
+*Falta estilizar e modificar o front
+*Falta estabelecer a transição de rotas
+*Falta criar métodos para busca de musicas, adição de musicas e edição
