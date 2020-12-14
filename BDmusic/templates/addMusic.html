@@ -1,0 +1,27 @@
+<html lang="pt-BR">
+    <head>
+        <title>Adicionar Musica</title>
+    </head>
+
+    <body>
+        <h1>Adicionar Música</h1>
+        <div class = "box_add">
+        <form action="" method="POST">
+            {{ formA.csrf_token }}
+            <label>Nome</label>
+            {{formA.nome()}}
+
+            <label>Cantor</label>
+            {{formA.cantor()}}
+            
+            <label>Duração</label>
+            {{formA.duracao()}}
+
+            <label>Descrição</label>
+            {{formA.descricao()}}
+            <input type="submit" value="Adicionar">
+        </form>
+        </div>
+
+    </body>
+</html>
