@@ -1,0 +1,140 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	background: #1d1e20;
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: hsl(32, 98%, 5%);
+	padding: 16px;
+	border-bottom: 2px solid #2ecc71;
+}
+
+h1 {
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.menu {
+	display: flex;
+}
+
+.menu li {
+	list-style: none;
+	margin-left: 10px;
+}
+
+.menu li a {
+	display: block;
+	padding: 10px
+}
+
+
+@keyframes up {
+	from {
+		opacity: 0;
+		transform: translateY(15px);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+main {
+	margin: 0 auto;
+	width: 80vw;
+	max-width: 960px;
+	animation: up 0.4s 0.2s backwards;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+footer {
+	margin-top: auto;
+	text-align: center;
+	padding: 3.2rem 0 1.6rem;
+	animation: up 0.4s 0.2s backwards;
+}
+
+footer::after {
+	content: "Criando por EMERSON ANDRADE & JONH KENNEDY";
+	opacity: 0.6;
+	font-size: 0.8rem;
+}
+
+.playlist {
+	border: 2px solid hsl(32, 98%, 5%);
+	position: relative;
+	margin: 0 auto;
+	height: 350px;
+	width: 350px;
+	overflow-y: auto;
+}
+
+.container {
+	border: 2px solid hsl(32, 98%, 5%);
+	border-radius: .2rem;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+
+	padding: 0.4rem;
+
+}
+
+.container input{
+	background: rgba(0, 0, 0, 0.2);
+	color: white;
+	padding: .4rem;
+	font-size: 1.2rem;
+	border: 0;
+	outline: none;
+	flex: 1;
+}
+
+.playlist .tag {
+	margin: 0.4rem;
+	padding: .4rem .6rem;
+	border-bottom: .01rem solid #2ecc71;
+
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+	animation: up 0.4s 0.2s backwards;
+
+	cursor: default;	
+}
+
+.playlist .tag i {
+	font-size: 0.8rem;
+	font-style: normal;
+
+	margin-left: .4rem;
+
+	transform: translateY(0.08rem);
+}
+
+.close::after {
+	content: "x";
+	height: 24px;
+	width: 24px;
+}
