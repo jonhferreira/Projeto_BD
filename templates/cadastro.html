@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Deezefy registro</title>
+    <link rel="icon" type="img/png" href={{url_for('static', filename='imgs/i_teste.png')}}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/vars.css')}}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/cadastro.css')}}>
+
+</head>
+<body>
+    <form class="box" action={{url_for('cadastro_ouvinte')}} method="POST">
+	{{ formU.csrf_token }}
+      	<h1>Inscreve-se</h1>
+		<div>
+	        {{ formO.p_nome(placeholder='Nome', id='p_nome') }}
+		</div>
+		<div>
+	        {{ formU.email(placeholder='Email', id='email') }}
+		</div>
+		
+		<div>
+	       	{{ formU.senha(placeholder='password', id='senha') }}
+		</div>
+		<div>
+	       {{ formU.confirm(placeholder='Confirmar password', id='confirmarsenha') }}
+		</div>
+		<div>
+	        <label for="data_nasc">Data nascimento:</label>
+	        {{ formU.data_nasc(placeholder='02/08/1999')}}
+		</div>
+      <input type="submit" name="" value="Inscreve-se">
+    </form>
+</body>
+</html>
