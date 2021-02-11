@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: var(--color-fundo-home);
+}
+
+.box {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  animation: up 0.4s 0.2s backwards;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-box);
+  text-align: center;
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--tom-de-preto);
+	padding: 16px;
+	border-bottom: 2px solid var(--color-verde);
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.menu {
+	display: flex;
+}
+
+.menu li {
+	list-style: none;
+	margin-left: 10px;
+}
+
+.menu li a {
+	display: block;
+	padding: 10px
+}
+
+
+@keyframes up {
+	from {
+		opacity: 0;
+		transform: translateY(15px);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.box input {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid var(--color-azul);
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input:focus {
+  width: 280px;
+  border-color: var(--color-verde);
+}
+
+.box input[type= "submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid var(--color-verde);
+  padding: 14px 10px;
+  width: 150px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box input[type= "submit"]:hover {
+  background-color: var(--color-verde);
+}
