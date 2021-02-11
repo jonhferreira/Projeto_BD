@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Deezefy</title>
+	<link rel="icon" type="img/png" href={{url_for('static', filename='imgs/i_teste.png')}}>
+	<link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/vars.css')}}>
+	<link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/base.css')}}>
+
+	<style>
+		#aviso {
+			color: var(--color-verde);
+		}
+	</style>
+</head>
+<body>
+	{% if current_user.is_authenticated %}
+
+		<header>
+			<h1>Deezefy</h1>
+			<nav>
+				<ul class="menu">
+					<li><a href="" class="op_menu" id="listar">Listar músicas</a></li>
+					<li><a href="{{ url_for('cadastro_musica')}}"  id="add">Adicionar música</a></li>
+					<li><a href="{{ url_for('logout') }}" id="logout">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+
+			<div class="bemvindo">
+				
+			{% for o in ouv %}
+				{% if o.email == current_user.email %}
+					<h1>Bem vindo {{ o.p_nome }} </h1>
+				{% endif %}
+			{% endfor %}
+
+			{% for a in art %}
+				{% if a.email == current_user.email %}
+					<h1>Bem vindo {{ a.nome }} </h1>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<table class="playlist">
+				<tr>
+					<td>NOME DA MÚSICA</td>
+					<td>AÇÃO</td>
+			
+				</tr>
+				{% for musica in musicas %}
+				<tr>
+						<td class="tag">{{ musica.nome}}</td>
+						<td><a href="/delete/{{musica.ide}}">excluir</a></td>
+				</tr>
+				{% endfor %}
+			</table>
+
+		</main>
+
+		<footer></footer>
+
+
+		<script src={{ url_for('static', filename='js/base.js')}}></script>
+	{% else %}
+		<div>
+			<h1>Visitante</h1>
+			<p><a href="{{ url_for('login')}}" id="aviso"> Faça login primeiro</a></p>
+		</div>
+	{% endif %}
+
+</body>
+</html>

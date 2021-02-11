@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deezefy</title>
+    <link rel="icon" type="img/png" href={{url_for('static', filename='imgs/i_teste.png')}}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/vars.css')}}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/loginForm.css')}}>
+  </head>
+  <body>
+    
+    <form class="box" action="" method="POST">
+      <h1>Login</h1>
+      <input type="text" name="email" placeholder="email">
+      <input type="password" name="senha" placeholder="senha"> 
+     
+      <input type="submit" name="" value="Login">
+      <a href="{{ url_for('escolha')}}">Criar conta</a>
+    </form>
+
+  </body>
+</html>

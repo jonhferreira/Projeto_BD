@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deezefy adiciona musica</title>
+    <link rel="icon" type="img/png" href={{url_for('static', filename='imgs/i_teste.png')}}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/vars.css')}}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/add_music.css')}}>
+</head>
+<body>
+
+    <header>
+        <h1>Deezefy</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="{{url_for('home')}}"  id="listar">Listar músicas</a></li>
+                <li><a href="{{ url_for('cadastro_musica')}}"  id="add">Adicionar música</a></li>
+                <li><a href="{{ url_for('logout') }}" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <form action="" method="POST" class="box">
+            <div class = "widadd">
+            {{ formM.csrf_token }}
+            
+            {{formM.nome(placeholder="nome")}}
+            </div>
+
+            <div class = "widadd">
+            
+            {{formM.duracao(placeholder="duração")}}
+            </div>
+            
+            <div class = "widadd">
+                <label>genero</label>
+                {{formM.genero()}}
+            </div>
+            
+            <input type="submit" value="Adicionar">
+        </form>
+    </main>
+    
+    
+</body>
+</html>
+        </div>

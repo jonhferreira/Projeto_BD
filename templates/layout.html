@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>{% block title %}Layout{% endblock %}</title>
+    </head>
+    {% block stilo %} {% endblock %}
+
+    <style>
+        body{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+        }
+        .rodape{
+            background: rgb(204, 39, 39);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0px 10px;
+            box-shadow: black;
+        }
+        .cabecalho{
+            background: rgb(204, 39, 39);
+            width: 100%;
+            display:flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+    </style>
+    <body>
+            <div class = "cabecalho">
+            <div class="navegar">
+                <img src="./templates/logo.png" alt="musica">
+            </div>
+                <div class="navegar">
+                    <label><a href="home">Home</a></label>
+                </div>
+
+                <div class = "navegar">
+                    <label><a href="addmusic">Adicionar Música</a></label>
+                </div>
+
+                <form action = "/searcmusic" method="POST">
+                    <div class="navegar">
+                        <input type="search"/>
+                        <input type="submit" value="Pesquisar"/>
+                    </div>
+                </form>
+
+            </div>
+        <div class="centro">
+            {% block content %}{% endblock %}
+        </div>
+        
+        <div class="rodape">
+            <label>Desenvolvido por Alguém</label>
+        </div>
+        
+    </body>
+</html>
