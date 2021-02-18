@@ -1,1 +1,1 @@
-python3 flask_app.py
+python flask_app.py
